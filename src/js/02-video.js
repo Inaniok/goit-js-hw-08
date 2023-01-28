@@ -14,3 +14,15 @@ player
 .catch(function (error) {
     console.error(error)
 });
+
+player.setCurrentTime(currentTime).then(function(seconds) {
+}).catch(function(error) {
+    switch (error.name) {
+        case 'RangeError':
+         break;
+
+        default:
+            
+            break;
+    }
+});
