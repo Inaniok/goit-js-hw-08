@@ -11,15 +11,12 @@ player.on('play', function() {
 player.getVideoTitle().then(function(title) {
     console.log('title:', title);
 });
-
-
    
 const onPlay = function(data) {
  localStorage.setItem("videoplayer_current_time",data.seconds);
 };
 
 player.on('timeupdate', throttle(onPlay,1000));
-
 
 const currentTime = Number(localStorage.getItem("videoplayer_current_time"))
 
